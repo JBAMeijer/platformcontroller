@@ -49,7 +49,7 @@ double Setpoint, Output_X, Output_Y;
 
 //Specify the links and initial tuning parameters
 double Ktune = 0.5 /1023;                     // Pot-meter tuning gain.
-double Kp = 0.02, Ki = 0.03, Kd = 0.01;       // Kp = 0.32, Ki = 0.40, Kd = 0.40;                //Kp = -8.96, Ki = -0.96, Kd = -20.51;
+double Kp = 0.015, Ki = 0.03, Kd = 0.01;       // Kp = 0.32, Ki = 0.40, Kd = 0.40;                //Kp = -8.96, Ki = -0.96, Kd = -20.51;
 
 PID PID_X(&Input_X, &Output_X, &Setpoint, Kp, Ki, Kd, DIRECT);
 PID PID_Y(&Input_Y, &Output_Y, &Setpoint, Kp, Ki, Kd, DIRECT);
@@ -238,8 +238,7 @@ void loop() {
    {
 
       // PID Tuning through serial input
-   PID_X.SetTunings(Kp, Ki, Kd);
-   PID_Y.SetTunings(Kp, Ki, Kd);
+
     if(Serial.available() > 0)
       {
          char incomingByte = Serial.read();
@@ -270,6 +269,9 @@ void loop() {
             Kd = Kd - 0.005;
          }
          Serial.println("Kp: " + String(Kp) + " Ki: " + String(Ki) + " Kd: " + String(Kd));
+
+         PID_X.SetTunings(Kp, Ki, Kd);
+         PID_Y.SetTunings(Kp, Ki, Kd);
 
       }
 
