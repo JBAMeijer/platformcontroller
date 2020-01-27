@@ -35,9 +35,3 @@ In case the gains want to be changed permanently, the constant variables have to
 The Demo mode runs in a loop, controlling the platform in a prefined pattern.
 
 
-**example**
-```
-./markerdetection -fps 5 -dbg 1 -roi 80
-```
-## Built With
-* [OpenCV](https://opencv.org/) - **OpenCV** (_Open source computer vision_) is a [library of programming functions](https://en.wikipedia.org/wiki/Library_(computing) "Library (computing)") mainly aimed at real-time [computer vision](https://en.wikipedia.org/wiki/Computer_vision "Computer vision").[[1]](https://en.wikipedia.org/wiki/OpenCV#cite_note-1) Originally developed by [Intel](https://en.wikipedia.org/wiki/Intel_Corporation "Intel Corporation"), it was later supported by [Willow Garage](https://en.wikipedia.org/wiki/Willow_Garage "Willow Garage") then Itseez (which was later acquired by Intel[[2]](https://en.wikipedia.org/wiki/OpenCV#cite_note-2)). The library is [cross-platform](https://en.wikipedia.org/wiki/Cross-platform "Cross-platform") and free for use under the [open-source](https://en.wikipedia.org/wiki/Open-source_software "Open-source software") [BSD license](https://en.wikipedia.org/wiki/BSD_license "BSD license").
